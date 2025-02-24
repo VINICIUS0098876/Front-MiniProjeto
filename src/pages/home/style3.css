@@ -1,0 +1,213 @@
+/* Reset global de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.home-body3{
+    background-image: url(/src/assets/fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  /* Adicionando desfoque à imagem de fundo */
+.home-body3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(3px); /* O valor pode ser ajustado para mais ou menos desfoque */
+    z-index: -1; /* Coloca a camada de desfoque atrás do conteúdo */
+  }
+
+  header{
+    background-color: #E6B15C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 50px;
+    width: 100%;
+  }
+  
+  main{
+    width: 100vw;
+    height: 86.5vh;
+    /* background-color: #333; */
+  }
+
+  .nome{
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  .perfil i{
+    font-size: 2rem;
+    color: #ffffff;
+}
+  
+  /* Estilos para a classe home-body3 */
+  .home-body3 {
+    background-color: #f4f4f4; /* Cor de fundo para a página */
+    font-family: 'Roboto', sans-serif; /* Fonte personalizada */
+  }
+  
+  /* Estilos do botão de menu hambúrguer */
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+    height: 50px;
+    /* position: absolute; */
+    align-items: center;
+    z-index: 999;
+  }
+
+  .hamburger:hover{
+    background-color: transparent;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Menu lateral */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    transition: left 0.3s ease; /* A transição acontece quando o menu é aberto */
+  }
+
+
+.sair{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-size: 2rem;
+}
+
+
+  .logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+  }
+
+  .logout i{
+    font-size: 2rem;
+  }
+
+  .logout:hover{
+    background-color: rgb(173, 7, 7);
+  }
+  
+  .menu.open {
+    left: 0; /* Menu aparece na tela */
+  }
+  
+  .menu ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    /* padding: 20px; */
+  }
+  
+.menu li{
+    display: flex;
+    text-align: center;
+}
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+    padding: 10px;
+  }
+  
+  .menu a:hover {
+    color: wheat;
+    /* background-color: #E6B15C; */
+  }
+
+  .container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 200px;
+    /* background-color: #333; */
+  }
+
+  .cardapio{
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .outros{
+    background-color: #333;
+    height: 100px;
+    color: white;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  
+  /* Animação para as barras do hambúrguer */
+  .bar.rotate:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+  
+  .bar.rotate:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .bar.rotate:nth-child(3) {
+    transform: rotate(45deg);
+  }
+  

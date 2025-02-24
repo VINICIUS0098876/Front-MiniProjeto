@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importe o useNavigate
 
-import './style.css';
+import './style1.css';
 
-function Home() {
+function Cadastro() {
+  document.body.classList.add('home-body1');
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -38,10 +39,10 @@ function Home() {
   };
 
   return (
-    <div className="container">
-      <div className='container2'>
+    <div className="container-cadastro">
+      <div className='container2-cadastro'>
         <h1>BEM-VINDO A CASINHA DOS SALGADOS!</h1>
-        <img src="/src/assets/logo.jpg" alt="" />
+        <img src="/src/assets/logo2.jpg" alt="" />
       </div>
       <form onSubmit={handleSubmit}>
         <h1>Cadastre-se</h1>
@@ -72,4 +73,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Cadastro;

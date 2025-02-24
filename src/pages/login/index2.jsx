@@ -1,8 +1,9 @@
     import { useNavigate } from 'react-router-dom';
     import { useState } from 'react'; 
-    import './style.css'
+    import './style2.css'
 
     export default function Login() {
+        document.body.classList.add('home-body2');
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -31,9 +32,10 @@
         // Armazene o token no localStorage
         if (data) {
             localStorage.setItem('token', data.token);
+            localStorage.setItem('nome', data.nome);
             console.log(data)
             // Navega para a página do dashboard
-            navigate('/dashboard');
+            navigate('/home');
         }
 
         // eslint-disable-next-line no-unused-vars
@@ -43,10 +45,10 @@
     };
 
     return (
-        <div className="container">
-             <div className='container2'>
+        <div className="container-login">
+             <div className='container2-login'>
         <h1>QUE LEGAL JÁ TEM UMA CONTA!</h1>
-        <img src="/src/assets/logo.jpg" alt="" />
+        <img src="/src/assets/logo2.jpg" alt="" />
       </div>
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>
