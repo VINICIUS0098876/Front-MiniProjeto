@@ -11,6 +11,8 @@
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setError(''); 
+
 
         try {
         const response = await fetch('http://localhost:3000/login', {
@@ -29,18 +31,22 @@
         }
 
         const data = await response.json();
-        // Armazene o token no localStorage
+
+
         if (data) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('nome', data.nome);
             console.log(data)
-            // Navega para a página do dashboard
+        }
+
+        if (data.token) {
             navigate('/home');
         }
 
-        // eslint-disable-next-line no-unused-vars
+         
         } catch (error) {
-        setError('Erro ao fazer login, tente novamente!');
+            console.error('Erro no login:', error)
+        setError(error.message);
         }
     };
 
@@ -56,13 +62,15 @@
             type="email" 
             placeholder="Digite seu e-mail" 
             value={email}
-            onChange={(e) => setEmail(e.target.value)} 
+            onChange={(e) => setEmail(e.target.value)}
+            className={error ? "input-error" : "Erro"} 
             />
             <input 
             type="password" 
             placeholder="Digite sua senha" 
             value={senha}
-            onChange={(e) => setSenha(e.target.value)} 
+            onChange={(e) => setSenha(e.target.value)}
+            className={error ? "input-error" : "Erro"} 
             />
             <button type="submit">Login</button>
             {error && <p>{error}</p>}

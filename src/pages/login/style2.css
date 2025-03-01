@@ -92,3 +92,16 @@ input:focus{
     border-color: #B45F3C;
   outline: none;
 }
+
+/* Adiciona borda vermelha nos inputs quando há erro */
+.input-error {
+  border: 2px solid red;
+}
+
+/* Estiliza a mensagem de erro abaixo dos inputs */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -20px;
+  text-align: left;
+}

@@ -6,6 +6,7 @@ import './index.css'
 import Cadastro from './pages/cadastro/index'
 import Login from './pages/login/index2'
 import Home from './pages/home/index3'
+import Perfil from './pages/perfil/perfil.jsx'
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
         <Route path="/" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
     </Router>
   )

@@ -1,0 +1,95 @@
+.perfil-body{
+    background-image: url(/src/assets/fundo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.perfil-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(3px); /* O valor pode ser ajustado para mais ou menos desfoque */
+    z-index: -1; /* Coloca a camada de desfoque atrás do conteúdo */
+  }
+
+
+
+.navbar-perfil{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 100px;
+}
+
+.navbar-perfil h1{
+    color: #fff;
+}
+
+.navbar-perfil a{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.delete-accont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.delete-accont p{
+    font-size: 1.5rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    background-color: #fff;
+}
+
+.container-profile h1{
+    color: black;
+}
+
+.items-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.items-profile > p{
+    background-color: #E6B15C;
+    padding: 10px;
+    border-radius: 50px;
+    color: #fff;
+}
